@@ -38,7 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.numrewtxt = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.autotxt = new System.Windows.Forms.ComboBox();
             this.nameclitxt = new System.Windows.Forms.TextBox();
@@ -50,28 +57,26 @@
             this.pricetxt = new System.Windows.Forms.TextBox();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.clearbtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.loadXmlbtn = new System.Windows.Forms.Button();
             this.saveXmlbtn = new System.Windows.Forms.Button();
-            this.clearbtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numrewtxt = new System.Windows.Forms.NumericUpDown();
+            this.uptop5btn = new System.Windows.Forms.Button();
+            this.pg3 = new System.Windows.Forms.PropertyGrid();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -197,6 +202,41 @@
             this.dgv.TabIndex = 4;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ім\'я Менеджера";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 315;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ім\'я Клієнта";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 315;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ціна продажу";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 105;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Авто";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 170;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "% винагороди";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
@@ -217,6 +257,23 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(729, 247);
             this.panel3.TabIndex = 3;
+            // 
+            // numrewtxt
+            // 
+            this.numrewtxt.Location = new System.Drawing.Point(194, 204);
+            this.numrewtxt.Name = "numrewtxt";
+            this.numrewtxt.Size = new System.Drawing.Size(236, 30);
+            this.numrewtxt.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(17, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 25);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "%Винагороди";
             // 
             // label7
             // 
@@ -339,6 +396,17 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Вартість покупки";
             // 
+            // clearbtn
+            // 
+            this.clearbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.clearbtn.Location = new System.Drawing.Point(896, 339);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(215, 34);
+            this.clearbtn.TabIndex = 1;
+            this.clearbtn.Text = "Очистити Таблицю";
+            this.clearbtn.UseVisualStyleBackColor = true;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
@@ -373,17 +441,6 @@
             this.saveXmlbtn.UseVisualStyleBackColor = true;
             this.saveXmlbtn.Click += new System.EventHandler(this.saveXmlbtn_Click);
             // 
-            // clearbtn
-            // 
-            this.clearbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.clearbtn.Location = new System.Drawing.Point(896, 339);
-            this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(215, 34);
-            this.clearbtn.TabIndex = 1;
-            this.clearbtn.Text = "Очистити Таблицю";
-            this.clearbtn.UseVisualStyleBackColor = true;
-            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(165)))), ((int)(((byte)(190)))));
@@ -402,69 +459,64 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(30, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(432, 36);
+            this.label6.Size = new System.Drawing.Size(467, 36);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Топ 5 найкращих менеджерів";
+            this.label6.Text = "Найрезультативніші менеджери\r\n";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.uptop5btn);
+            this.panel1.Controls.Add(this.pg3);
+            this.panel1.Controls.Add(this.listBox3);
             this.panel1.Location = new System.Drawing.Point(36, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 480);
+            this.panel1.Size = new System.Drawing.Size(1065, 480);
             this.panel1.TabIndex = 0;
             // 
-            // Column1
+            // uptop5btn
             // 
-            this.Column1.HeaderText = "Ім\'я Менеджера";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 315;
+            this.uptop5btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uptop5btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.uptop5btn.Location = new System.Drawing.Point(819, 392);
+            this.uptop5btn.Name = "uptop5btn";
+            this.uptop5btn.Size = new System.Drawing.Size(210, 45);
+            this.uptop5btn.TabIndex = 2;
+            this.uptop5btn.Text = "Оновити";
+            this.uptop5btn.UseVisualStyleBackColor = true;
+            this.uptop5btn.Click += new System.EventHandler(this.uptop5btn_Click);
             // 
-            // Column3
+            // pg3
             // 
-            this.Column3.HeaderText = "Ім\'я Клієнта";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 315;
+            this.pg3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pg3.HelpVisible = false;
+            this.pg3.Location = new System.Drawing.Point(527, 111);
+            this.pg3.Name = "pg3";
+            this.pg3.Size = new System.Drawing.Size(521, 158);
+            this.pg3.TabIndex = 1;
             // 
-            // Column2
+            // listBox3
             // 
-            this.Column2.HeaderText = "Ціна продажу";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 105;
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 25;
+            this.listBox3.Location = new System.Drawing.Point(14, 72);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(507, 254);
+            this.listBox3.TabIndex = 0;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
-            // Column4
+            // label9
             // 
-            this.Column4.HeaderText = "Авто";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 170;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "% винагороди";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(17, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 25);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "%Винагороди";
-            // 
-            // numrewtxt
-            // 
-            this.numrewtxt.Location = new System.Drawing.Point(194, 204);
-            this.numrewtxt.Name = "numrewtxt";
-            this.numrewtxt.Size = new System.Drawing.Size(236, 30);
-            this.numrewtxt.TabIndex = 11;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(527, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(226, 36);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Сума продажів";
             // 
             // MainForm
             // 
@@ -477,7 +529,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "admin3000";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -486,10 +538,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -532,5 +586,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.NumericUpDown numrewtxt;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PropertyGrid pg3;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button uptop5btn;
+        private System.Windows.Forms.Label label9;
     }
 }

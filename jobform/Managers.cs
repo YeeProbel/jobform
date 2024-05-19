@@ -22,4 +22,9 @@ namespace jobform
         public string cReward { get; set; }
         
     }
+    public class ManagerSales
+    {
+        public string ManagerName { get; set; }
+        public decimal TotalSales { get; set; }
+    }
 }

@@ -193,5 +193,62 @@ namespace jobform
             };
             pg2.SelectedObject = sale;
         }
+
+        private void uptop5btn_Click(object sender, EventArgs e)
+        {
+            List<ManagerSales> managerSalesList = new List<ManagerSales>();
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                string name = row.Cells[0].Value?.ToString();
+                if (decimal.TryParse(row.Cells[2].Value?.ToString(), out decimal price))
+                {
+                    var managerSales = managerSalesList.FirstOrDefault(m => m.ManagerName == name);
+                    if (managerSales == null)
+                    {
+                        managerSalesList.Add(new ManagerSales { ManagerName = name, TotalSales = price });
+                    }
+                    else
+                    {
+                        managerSales.TotalSales += price;
+                    }
+                }
+            }
+
+            // сортування бульбашкою
+            for (int i = 0; i < managerSalesList.Count - 1; i++)
+            {
+                for (int j = 0; j < managerSalesList.Count - i - 1; j++)
+                {
+                    if (managerSalesList[j].TotalSales < managerSalesList[j + 1].TotalSales)
+                    {
+                        var temp = managerSalesList[j];
+                        managerSalesList[j] = managerSalesList[j + 1];
+                        managerSalesList[j + 1] = temp;
+                    }
+                }
+            }
+
+            // вибираємо топ 5 менеджерів
+            topManagers = managerSalesList.Take(5).ToList();
+
+            listBox3.Items.Clear();
+            foreach (var manager in topManagers)
+            {
+                listBox3.Items.Add(manager.ManagerName);
+            }
+        }
+        private List<ManagerSales> topManagers;
+
+
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox3.SelectedIndex >= 0 && listBox3.SelectedIndex < topManagers.Count)
+            {
+                int n = listBox3.SelectedIndex;
+                pg3.SelectedObject = topManagers[n];
+            }
+        }
     }
 }
