@@ -39,25 +39,31 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.autotxt = new System.Windows.Forms.ComboBox();
+            this.nameclitxt = new System.Windows.Forms.TextBox();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pricetxt = new System.Windows.Forms.TextBox();
+            this.nametxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.loadXmlbtn = new System.Windows.Forms.Button();
+            this.saveXmlbtn = new System.Windows.Forms.Button();
+            this.clearbtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numrewtxt = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -65,6 +71,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,7 +83,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(938, 542);
+            this.tabControl1.Size = new System.Drawing.Size(1142, 636);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -91,27 +98,28 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(930, 504);
+            this.tabPage1.Size = new System.Drawing.Size(1134, 598);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Головна";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(483, 39);
+            this.label2.Location = new System.Drawing.Point(567, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(418, 27);
+            this.label2.Size = new System.Drawing.Size(335, 36);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Відомості про найбільшу суму продажів";
+            this.label2.Text = "Відомості про продажі";
             // 
             // pg2
             // 
+            this.pg2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pg2.HelpVisible = false;
-            this.pg2.Location = new System.Drawing.Point(488, 275);
+            this.pg2.Location = new System.Drawing.Point(573, 319);
             this.pg2.Name = "pg2";
-            this.pg2.Size = new System.Drawing.Size(423, 180);
+            this.pg2.Size = new System.Drawing.Size(546, 234);
             this.pg2.TabIndex = 4;
             this.pg2.ViewBackColor = System.Drawing.SystemColors.Control;
             // 
@@ -120,17 +128,19 @@
             this.listBox2.BackColor = System.Drawing.SystemColors.Control;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 25;
-            this.listBox2.Location = new System.Drawing.Point(488, 74);
+            this.listBox2.Location = new System.Drawing.Point(573, 90);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(423, 179);
+            this.listBox2.Size = new System.Drawing.Size(546, 204);
             this.listBox2.TabIndex = 3;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // pg1
             // 
+            this.pg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pg1.HelpVisible = false;
-            this.pg1.Location = new System.Drawing.Point(29, 275);
+            this.pg1.Location = new System.Drawing.Point(21, 319);
             this.pg1.Name = "pg1";
-            this.pg1.Size = new System.Drawing.Size(420, 180);
+            this.pg1.Size = new System.Drawing.Size(546, 234);
             this.pg1.TabIndex = 2;
             this.pg1.ViewBackColor = System.Drawing.SystemColors.Control;
             // 
@@ -139,33 +149,34 @@
             this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(29, 74);
+            this.listBox1.Location = new System.Drawing.Point(21, 90);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(420, 179);
+            this.listBox1.Size = new System.Drawing.Size(546, 204);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(24, 39);
+            this.label1.Location = new System.Drawing.Point(15, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 27);
+            this.label1.Size = new System.Drawing.Size(388, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Менеджер та його клієнти";
+            this.label1.Text = "Відомості про менеджерів";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(165)))), ((int)(((byte)(190)))));
             this.tabPage2.Controls.Add(this.dgv);
             this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.clearbtn);
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(930, 504);
+            this.tabPage2.Size = new System.Drawing.Size(1134, 598);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Редактор";
             // 
@@ -174,74 +185,125 @@
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column3,
             this.Column2,
-            this.Column3});
-            this.dgv.Location = new System.Drawing.Point(23, 60);
+            this.Column4,
+            this.Column5});
+            this.dgv.Location = new System.Drawing.Point(23, 17);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(880, 265);
+            this.dgv.Size = new System.Drawing.Size(1088, 298);
             this.dgv.TabIndex = 4;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.numrewtxt);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.autotxt);
+            this.panel3.Controls.Add(this.nameclitxt);
+            this.panel3.Controls.Add(this.delbtn);
+            this.panel3.Controls.Add(this.editbtn);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.addbtn);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.pricetxt);
+            this.panel3.Controls.Add(this.nametxt);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(23, 345);
+            this.panel3.Location = new System.Drawing.Point(23, 332);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(629, 151);
+            this.panel3.Size = new System.Drawing.Size(729, 247);
             this.panel3.TabIndex = 3;
             // 
-            // button6
+            // label7
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(405, 103);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(199, 34);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Видалити";
-            this.button6.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(17, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 25);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Авто";
             // 
-            // button5
+            // autotxt
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(405, 58);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(199, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Редагувати";
-            this.button5.UseVisualStyleBackColor = true;
+            this.autotxt.FormattingEnabled = true;
+            this.autotxt.Items.AddRange(new object[] {
+            "BMW X1",
+            "BMW X3",
+            "BMW X5",
+            "BMW X6",
+            "BMW Z4",
+            "BMW M5",
+            "Volkswagen Golf",
+            "Volkswagen Polo",
+            "Volkswagen Passat",
+            "Volkswagen Tiguan",
+            "Volkswagen Toareg",
+            "Volkswagen Jetta",
+            "Volkswagen Arteron",
+            "Volkswagen ID.3",
+            "Volkswagen T-Cross"});
+            this.autotxt.Location = new System.Drawing.Point(150, 108);
+            this.autotxt.Name = "autotxt";
+            this.autotxt.Size = new System.Drawing.Size(280, 33);
+            this.autotxt.TabIndex = 8;
+            // 
+            // nameclitxt
+            // 
+            this.nameclitxt.Location = new System.Drawing.Point(150, 62);
+            this.nameclitxt.Name = "nameclitxt";
+            this.nameclitxt.Size = new System.Drawing.Size(280, 30);
+            this.nameclitxt.TabIndex = 7;
+            // 
+            // delbtn
+            // 
+            this.delbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.delbtn.Location = new System.Drawing.Point(500, 132);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(199, 34);
+            this.delbtn.TabIndex = 5;
+            this.delbtn.Text = "Видалити";
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
+            // 
+            // editbtn
+            // 
+            this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.editbtn.Location = new System.Drawing.Point(500, 74);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(199, 34);
+            this.editbtn.TabIndex = 4;
+            this.editbtn.Text = "Редагувати";
+            this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(17, 106);
+            this.label5.Location = new System.Drawing.Point(17, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "П.І.Б клієнта";
             // 
-            // button4
+            // addbtn
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(405, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(199, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Додати";
-            this.button4.UseVisualStyleBackColor = true;
+            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addbtn.Location = new System.Drawing.Point(500, 16);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(199, 34);
+            this.addbtn.TabIndex = 3;
+            this.addbtn.Text = "Додати";
+            this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // label3
             // 
@@ -253,72 +315,74 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "П.І.Б";
             // 
-            // textBox2
+            // pricetxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 30);
-            this.textBox2.TabIndex = 5;
+            this.pricetxt.Location = new System.Drawing.Point(194, 156);
+            this.pricetxt.Name = "pricetxt";
+            this.pricetxt.Size = new System.Drawing.Size(236, 30);
+            this.pricetxt.TabIndex = 5;
             // 
-            // textBox1
+            // nametxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 30);
-            this.textBox1.TabIndex = 2;
+            this.nametxt.Location = new System.Drawing.Point(72, 13);
+            this.nametxt.Name = "nametxt";
+            this.nametxt.Size = new System.Drawing.Size(358, 30);
+            this.nametxt.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(17, 62);
+            this.label4.Location = new System.Drawing.Point(17, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 25);
+            this.label4.Size = new System.Drawing.Size(171, 25);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Сума продажів";
+            this.label4.Text = "Вартість покупки";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(667, 345);
+            this.panel2.Controls.Add(this.loadXmlbtn);
+            this.panel2.Controls.Add(this.saveXmlbtn);
+            this.panel2.Location = new System.Drawing.Point(833, 397);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 151);
+            this.panel2.Size = new System.Drawing.Size(278, 182);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // loadXmlbtn
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(19, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Завантажити XML";
-            this.button3.UseVisualStyleBackColor = true;
+            this.loadXmlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadXmlbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.loadXmlbtn.Location = new System.Drawing.Point(43, 87);
+            this.loadXmlbtn.Name = "loadXmlbtn";
+            this.loadXmlbtn.Size = new System.Drawing.Size(199, 34);
+            this.loadXmlbtn.TabIndex = 2;
+            this.loadXmlbtn.Text = "Завантажити XML";
+            this.loadXmlbtn.UseVisualStyleBackColor = true;
+            this.loadXmlbtn.Click += new System.EventHandler(this.loadXmlbtn_Click);
             // 
-            // button1
+            // saveXmlbtn
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(19, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Зберегти як XML";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveXmlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveXmlbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.saveXmlbtn.Location = new System.Drawing.Point(43, 25);
+            this.saveXmlbtn.Name = "saveXmlbtn";
+            this.saveXmlbtn.Size = new System.Drawing.Size(199, 34);
+            this.saveXmlbtn.TabIndex = 0;
+            this.saveXmlbtn.Text = "Зберегти як XML";
+            this.saveXmlbtn.UseVisualStyleBackColor = true;
+            this.saveXmlbtn.Click += new System.EventHandler(this.saveXmlbtn_Click);
             // 
-            // button2
+            // clearbtn
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(688, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Очистити Таблицю";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clearbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.clearbtn.Location = new System.Drawing.Point(896, 339);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(215, 34);
+            this.clearbtn.TabIndex = 1;
+            this.clearbtn.Text = "Очистити Таблицю";
+            this.clearbtn.UseVisualStyleBackColor = true;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // tabPage3
             // 
@@ -327,69 +391,94 @@
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(930, 504);
+            this.tabPage3.Size = new System.Drawing.Size(1134, 598);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Найкращi менеджери";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(30, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(432, 36);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Топ 5 найкращих менеджерів";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(150)))), ((int)(((byte)(190)))));
             this.panel1.Location = new System.Drawing.Point(36, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(864, 402);
+            this.panel1.Size = new System.Drawing.Size(1054, 480);
             this.panel1.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(31, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(311, 27);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Топ 5 найкращих менеджерів";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(150, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 30);
-            this.textBox3.TabIndex = 7;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Ім\'я";
+            this.Column1.HeaderText = "Ім\'я Менеджера";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 325;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Сумма Продажів";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 175;
+            this.Column1.Width = 315;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Ім\'я Клієнта";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 325;
+            this.Column3.Width = 315;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ціна продажу";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 105;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Авто";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 170;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "% винагороди";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(17, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 25);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "%Винагороди";
+            // 
+            // numrewtxt
+            // 
+            this.numrewtxt.Location = new System.Drawing.Point(194, 204);
+            this.numrewtxt.Name = "numrewtxt";
+            this.numrewtxt.Size = new System.Drawing.Size(236, 30);
+            this.numrewtxt.TabIndex = 11;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(135)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(938, 542);
+            this.ClientSize = new System.Drawing.Size(1142, 636);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -400,6 +489,7 @@
             this.panel2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numrewtxt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,24 +507,30 @@
         private System.Windows.Forms.PropertyGrid pg1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button saveXmlbtn;
+        private System.Windows.Forms.Button loadXmlbtn;
+        private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nametxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox pricetxt;
+        private System.Windows.Forms.Button delbtn;
+        private System.Windows.Forms.Button editbtn;
+        private System.Windows.Forms.Button addbtn;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nameclitxt;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox autotxt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.NumericUpDown numrewtxt;
+        private System.Windows.Forms.Label label8;
     }
 }
