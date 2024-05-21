@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.exitbtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pg2 = new System.Windows.Forms.PropertyGrid();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -64,10 +66,12 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.uptop5btn = new System.Windows.Forms.Button();
             this.pg3 = new System.Windows.Forms.PropertyGrid();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.backbtn2 = new System.Windows.Forms.Button();
+            this.backbtn1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -94,6 +98,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(165)))), ((int)(((byte)(190)))));
+            this.tabPage1.Controls.Add(this.exitbtn);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.pg2);
             this.tabPage1.Controls.Add(this.listBox2);
@@ -106,6 +111,23 @@
             this.tabPage1.Size = new System.Drawing.Size(1134, 598);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Головна";
+            // 
+            // exitbtn
+            // 
+            this.exitbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitbtn.BackgroundImage")));
+            this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.exitbtn.FlatAppearance.BorderSize = 0;
+            this.exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitbtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.exitbtn.Location = new System.Drawing.Point(1075, 3);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.Size = new System.Drawing.Size(44, 42);
+            this.exitbtn.TabIndex = 6;
+            this.exitbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exitbtn.UseVisualStyleBackColor = true;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // label2
             // 
@@ -174,6 +196,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(165)))), ((int)(((byte)(190)))));
+            this.tabPage2.Controls.Add(this.backbtn1);
             this.tabPage2.Controls.Add(this.dgv);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.clearbtn);
@@ -414,14 +437,14 @@
             this.panel2.Controls.Add(this.saveXmlbtn);
             this.panel2.Location = new System.Drawing.Point(833, 397);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(278, 182);
+            this.panel2.Size = new System.Drawing.Size(278, 138);
             this.panel2.TabIndex = 1;
             // 
             // loadXmlbtn
             // 
             this.loadXmlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadXmlbtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.loadXmlbtn.Location = new System.Drawing.Point(43, 87);
+            this.loadXmlbtn.Location = new System.Drawing.Point(43, 76);
             this.loadXmlbtn.Name = "loadXmlbtn";
             this.loadXmlbtn.Size = new System.Drawing.Size(199, 34);
             this.loadXmlbtn.TabIndex = 2;
@@ -433,7 +456,7 @@
             // 
             this.saveXmlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveXmlbtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.saveXmlbtn.Location = new System.Drawing.Point(43, 25);
+            this.saveXmlbtn.Location = new System.Drawing.Point(43, 21);
             this.saveXmlbtn.Name = "saveXmlbtn";
             this.saveXmlbtn.Size = new System.Drawing.Size(199, 34);
             this.saveXmlbtn.TabIndex = 0;
@@ -444,6 +467,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(165)))), ((int)(((byte)(190)))));
+            this.tabPage3.Controls.Add(this.backbtn2);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
@@ -470,16 +494,27 @@
             this.panel1.Controls.Add(this.uptop5btn);
             this.panel1.Controls.Add(this.pg3);
             this.panel1.Controls.Add(this.listBox3);
-            this.panel1.Location = new System.Drawing.Point(36, 76);
+            this.panel1.Location = new System.Drawing.Point(26, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1065, 480);
+            this.panel1.Size = new System.Drawing.Size(1085, 446);
             this.panel1.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(527, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(226, 36);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Сума продажів";
             // 
             // uptop5btn
             // 
             this.uptop5btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uptop5btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.uptop5btn.Location = new System.Drawing.Point(819, 392);
+            this.uptop5btn.Location = new System.Drawing.Point(838, 354);
             this.uptop5btn.Name = "uptop5btn";
             this.uptop5btn.Size = new System.Drawing.Size(210, 45);
             this.uptop5btn.TabIndex = 2;
@@ -507,16 +542,37 @@
             this.listBox3.TabIndex = 0;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
-            // label9
+            // backbtn2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(527, 72);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 36);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Сума продажів";
+            this.backbtn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn2.BackgroundImage")));
+            this.backbtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backbtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backbtn2.ForeColor = System.Drawing.SystemColors.Control;
+            this.backbtn2.Location = new System.Drawing.Point(1002, 544);
+            this.backbtn2.Name = "backbtn2";
+            this.backbtn2.Size = new System.Drawing.Size(109, 35);
+            this.backbtn2.TabIndex = 4;
+            this.backbtn2.Text = "Назад";
+            this.backbtn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.backbtn2.UseVisualStyleBackColor = true;
+            this.backbtn2.Click += new System.EventHandler(this.backbtn2_Click);
+            // 
+            // backbtn1
+            // 
+            this.backbtn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn1.BackgroundImage")));
+            this.backbtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backbtn1.ForeColor = System.Drawing.SystemColors.Control;
+            this.backbtn1.Location = new System.Drawing.Point(1002, 544);
+            this.backbtn1.Name = "backbtn1";
+            this.backbtn1.Size = new System.Drawing.Size(109, 35);
+            this.backbtn1.TabIndex = 5;
+            this.backbtn1.Text = "Назад";
+            this.backbtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.backbtn1.UseVisualStyleBackColor = true;
+            this.backbtn1.Click += new System.EventHandler(this.backbtn1_Click);
             // 
             // MainForm
             // 
@@ -590,5 +646,8 @@
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button uptop5btn;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.Button backbtn2;
+        private System.Windows.Forms.Button backbtn1;
     }
 }

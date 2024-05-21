@@ -11,8 +11,10 @@ using System.IO;
 
 namespace jobform
 {
+    
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
@@ -21,6 +23,25 @@ namespace jobform
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+        private void Swap(List<ManagerSales> list, int index1, int index2)
+        {
+            var temp = list[index1];
+            list[index1] = list[index2];
+            list[index2] = temp;
+        }
+        private void BubbleSort(List<ManagerSales> list)
+        {
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                for (int j = 0; j < list.Count - i - 1; j++)
+                {
+                    if (list[j].TotalSales < list[j + 1].TotalSales)
+                    {
+                        Swap(list, j, j + 1);
+                    }
+                }
+            }
         }
 
         private void addbtn_Click(object sender, EventArgs e)
@@ -214,22 +235,7 @@ namespace jobform
                     }
                 }
             }
-
-            // сортування бульбашкою
-            for (int i = 0; i < managerSalesList.Count - 1; i++)
-            {
-                for (int j = 0; j < managerSalesList.Count - i - 1; j++)
-                {
-                    if (managerSalesList[j].TotalSales < managerSalesList[j + 1].TotalSales)
-                    {
-                        var temp = managerSalesList[j];
-                        managerSalesList[j] = managerSalesList[j + 1];
-                        managerSalesList[j + 1] = temp;
-                    }
-                }
-            }
-
-            // вибираємо топ 5 менеджерів
+            BubbleSort(managerSalesList);
             topManagers = managerSalesList.Take(5).ToList();
 
             listBox3.Items.Clear();
@@ -239,9 +245,6 @@ namespace jobform
             }
         }
         private List<ManagerSales> topManagers;
-
-
-
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox3.SelectedIndex >= 0 && listBox3.SelectedIndex < topManagers.Count)
@@ -249,6 +252,21 @@ namespace jobform
                 int n = listBox3.SelectedIndex;
                 pg3.SelectedObject = topManagers[n];
             }
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void backbtn1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void backbtn2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
         }
     }
 }

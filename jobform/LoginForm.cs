@@ -24,6 +24,7 @@ namespace jobform
             if(loginTxt.Text == "admin1" && passTxt.Text == "1111")
             {
                 mf.Show();
+                this.Hide();
             }
             else
             {
