@@ -25,6 +25,6 @@ namespace jobform
     public class ManagerSales
     {
         public string ManagerName { get; set; }
-        public decimal TotalSales { get; set; }
+        public double TotalSales { get; set; }
     }
 }

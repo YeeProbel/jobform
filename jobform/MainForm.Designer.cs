@@ -39,6 +39,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.backbtn1 = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,14 +65,13 @@
             this.loadXmlbtn = new System.Windows.Forms.Button();
             this.saveXmlbtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.backbtn2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.uptop5btn = new System.Windows.Forms.Button();
             this.pg3 = new System.Windows.Forms.PropertyGrid();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.backbtn2 = new System.Windows.Forms.Button();
-            this.backbtn1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -208,6 +208,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Редактор";
             // 
+            // backbtn1
+            // 
+            this.backbtn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn1.BackgroundImage")));
+            this.backbtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backbtn1.ForeColor = System.Drawing.SystemColors.Control;
+            this.backbtn1.Location = new System.Drawing.Point(1002, 544);
+            this.backbtn1.Name = "backbtn1";
+            this.backbtn1.Size = new System.Drawing.Size(109, 35);
+            this.backbtn1.TabIndex = 5;
+            this.backbtn1.Text = "Назад";
+            this.backbtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.backbtn1.UseVisualStyleBackColor = true;
+            this.backbtn1.Click += new System.EventHandler(this.backbtn1_Click);
+            // 
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -224,6 +240,7 @@
             this.dgv.Size = new System.Drawing.Size(1088, 298);
             this.dgv.TabIndex = 4;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dgv.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_RowHeaderMouseClick);
             // 
             // Column1
             // 
@@ -476,6 +493,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Найкращi менеджери";
             // 
+            // backbtn2
+            // 
+            this.backbtn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn2.BackgroundImage")));
+            this.backbtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backbtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backbtn2.ForeColor = System.Drawing.SystemColors.Control;
+            this.backbtn2.Location = new System.Drawing.Point(1002, 544);
+            this.backbtn2.Name = "backbtn2";
+            this.backbtn2.Size = new System.Drawing.Size(109, 35);
+            this.backbtn2.TabIndex = 4;
+            this.backbtn2.Text = "Назад";
+            this.backbtn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.backbtn2.UseVisualStyleBackColor = true;
+            this.backbtn2.Click += new System.EventHandler(this.backbtn2_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -541,38 +574,6 @@
             this.listBox3.Size = new System.Drawing.Size(507, 254);
             this.listBox3.TabIndex = 0;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
-            // 
-            // backbtn2
-            // 
-            this.backbtn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn2.BackgroundImage")));
-            this.backbtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.backbtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backbtn2.ForeColor = System.Drawing.SystemColors.Control;
-            this.backbtn2.Location = new System.Drawing.Point(1002, 544);
-            this.backbtn2.Name = "backbtn2";
-            this.backbtn2.Size = new System.Drawing.Size(109, 35);
-            this.backbtn2.TabIndex = 4;
-            this.backbtn2.Text = "Назад";
-            this.backbtn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.backbtn2.UseVisualStyleBackColor = true;
-            this.backbtn2.Click += new System.EventHandler(this.backbtn2_Click);
-            // 
-            // backbtn1
-            // 
-            this.backbtn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn1.BackgroundImage")));
-            this.backbtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.backbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backbtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backbtn1.ForeColor = System.Drawing.SystemColors.Control;
-            this.backbtn1.Location = new System.Drawing.Point(1002, 544);
-            this.backbtn1.Name = "backbtn1";
-            this.backbtn1.Size = new System.Drawing.Size(109, 35);
-            this.backbtn1.TabIndex = 5;
-            this.backbtn1.Text = "Назад";
-            this.backbtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.backbtn1.UseVisualStyleBackColor = true;
-            this.backbtn1.Click += new System.EventHandler(this.backbtn1_Click);
             // 
             // MainForm
             // 

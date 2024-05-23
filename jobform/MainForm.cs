@@ -61,7 +61,6 @@ namespace jobform
 
                 listBox1.Items.Add(nametxt.Text);
                 listBox2.Items.Add(pricetxt.Text);
-
             }
         }
 
@@ -108,6 +107,15 @@ namespace jobform
             pricetxt.Text = dgv.SelectedRows[0].Cells[2].Value.ToString();
             int n = Convert.ToInt32(dgv.SelectedRows[0].Cells[3].Value);
             numrewtxt.Value = n;
+
+            if(dgv.SelectedRows.Count > 0)
+            {
+                int nI = dgv.SelectedRows[0].Index;
+                nametxt.Text = dgv.Rows[nI].Cells[0].Value.ToString();
+                nameclitxt.Text = dgv.Rows[nI].Cells[1].Value.ToString();
+                pricetxt.Text = dgv.Rows[nI].Cells[2].Value.ToString();
+                autotxt.Text = dgv.Rows[nI].Cells[3].Value.ToString();
+            }
         }
 
         private void saveXmlbtn_Click(object sender, EventArgs e)
@@ -222,7 +230,7 @@ namespace jobform
             foreach (DataGridViewRow row in dgv.Rows)
             {
                 string name = row.Cells[0].Value?.ToString();
-                if (decimal.TryParse(row.Cells[2].Value?.ToString(), out decimal price))
+                if (double.TryParse(row.Cells[2].Value?.ToString(), out double price))
                 {
                     var managerSales = managerSalesList.FirstOrDefault(m => m.ManagerName == name);
                     if (managerSales == null)
@@ -267,6 +275,18 @@ namespace jobform
         private void backbtn2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void dgv_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgv.SelectedRows.Count > 0)
+            {
+                int n = dgv.SelectedRows[0].Index;
+                nametxt.Text = dgv.Rows[n].Cells[0].Value.ToString();
+                nameclitxt.Text = dgv.Rows[n].Cells[1].Value.ToString();
+                pricetxt.Text = dgv.Rows[n].Cells[2].Value.ToString();
+                autotxt.Text = dgv.Rows[n].Cells[3].Value.ToString();
+            }
         }
     }
 }
