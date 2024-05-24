@@ -107,15 +107,6 @@ namespace jobform
             pricetxt.Text = dgv.SelectedRows[0].Cells[2].Value.ToString();
             int n = Convert.ToInt32(dgv.SelectedRows[0].Cells[3].Value);
             numrewtxt.Value = n;
-
-            if(dgv.SelectedRows.Count > 0)
-            {
-                int nI = dgv.SelectedRows[0].Index;
-                nametxt.Text = dgv.Rows[nI].Cells[0].Value.ToString();
-                nameclitxt.Text = dgv.Rows[nI].Cells[1].Value.ToString();
-                pricetxt.Text = dgv.Rows[nI].Cells[2].Value.ToString();
-                autotxt.Text = dgv.Rows[nI].Cells[3].Value.ToString();
-            }
         }
 
         private void saveXmlbtn_Click(object sender, EventArgs e)
@@ -226,7 +217,7 @@ namespace jobform
         private void uptop5btn_Click(object sender, EventArgs e)
         {
             List<ManagerSales> managerSalesList = new List<ManagerSales>();
-
+           
             foreach (DataGridViewRow row in dgv.Rows)
             {
                 string name = row.Cells[0].Value?.ToString();
