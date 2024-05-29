@@ -107,15 +107,16 @@
             this.tabPage1.Controls.Add(this.pg1);
             this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1134, 598);
+            this.tabPage1.Size = new System.Drawing.Size(1134, 603);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Головна";
             // 
             // exitbtn
             // 
+            this.exitbtn.BackColor = System.Drawing.Color.Transparent;
             this.exitbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitbtn.BackgroundImage")));
             this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.exitbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -128,17 +129,18 @@
             this.exitbtn.Size = new System.Drawing.Size(44, 42);
             this.exitbtn.TabIndex = 6;
             this.exitbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.exitbtn.UseVisualStyleBackColor = true;
+            this.exitbtn.UseVisualStyleBackColor = false;
             this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(567, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(335, 36);
+            this.label2.Size = new System.Drawing.Size(265, 30);
             this.label2.TabIndex = 5;
             this.label2.Text = "Відомості про продажі";
             // 
@@ -156,7 +158,7 @@
             // 
             this.listBox2.BackColor = System.Drawing.SystemColors.Control;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 25;
+            this.listBox2.ItemHeight = 20;
             this.listBox2.Location = new System.Drawing.Point(573, 90);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(546, 204);
@@ -177,7 +179,7 @@
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(21, 90);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(546, 204);
@@ -187,11 +189,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(15, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 36);
+            this.label1.Size = new System.Drawing.Size(305, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Відомості про менеджерів";
             // 
@@ -205,15 +208,16 @@
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.clearbtn);
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1134, 598);
+            this.tabPage2.Size = new System.Drawing.Size(1134, 603);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Редактор";
             // 
             // backbtn1
             // 
+            this.backbtn1.BackColor = System.Drawing.Color.Transparent;
             this.backbtn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn1.BackgroundImage")));
             this.backbtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,7 +229,7 @@
             this.backbtn1.TabIndex = 5;
             this.backbtn1.Text = "Назад";
             this.backbtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.backbtn1.UseVisualStyleBackColor = true;
+            this.backbtn1.UseVisualStyleBackColor = false;
             this.backbtn1.Click += new System.EventHandler(this.backbtn1_Click);
             // 
             // dgv
@@ -306,7 +310,7 @@
             // 
             this.numrewtxt.Location = new System.Drawing.Point(194, 204);
             this.numrewtxt.Name = "numrewtxt";
-            this.numrewtxt.Size = new System.Drawing.Size(236, 30);
+            this.numrewtxt.Size = new System.Drawing.Size(236, 26);
             this.numrewtxt.TabIndex = 11;
             // 
             // label8
@@ -315,7 +319,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(17, 204);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 25);
+            this.label8.Size = new System.Drawing.Size(115, 20);
             this.label8.TabIndex = 10;
             this.label8.Text = "%Винагороди";
             // 
@@ -325,7 +329,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(17, 111);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 25);
+            this.label7.Size = new System.Drawing.Size(47, 20);
             this.label7.TabIndex = 9;
             this.label7.Text = "Авто";
             // 
@@ -350,14 +354,14 @@
             "Volkswagen T-Cross"});
             this.autotxt.Location = new System.Drawing.Point(150, 108);
             this.autotxt.Name = "autotxt";
-            this.autotxt.Size = new System.Drawing.Size(280, 33);
+            this.autotxt.Size = new System.Drawing.Size(280, 28);
             this.autotxt.TabIndex = 8;
             // 
             // nameclitxt
             // 
             this.nameclitxt.Location = new System.Drawing.Point(150, 62);
             this.nameclitxt.Name = "nameclitxt";
-            this.nameclitxt.Size = new System.Drawing.Size(280, 30);
+            this.nameclitxt.Size = new System.Drawing.Size(280, 26);
             this.nameclitxt.TabIndex = 7;
             // 
             // delbtn
@@ -390,7 +394,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(17, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 25);
+            this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "П.І.Б клієнта";
             // 
@@ -412,7 +416,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(17, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 25);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "П.І.Б";
             // 
@@ -420,14 +424,14 @@
             // 
             this.pricetxt.Location = new System.Drawing.Point(194, 156);
             this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(236, 30);
+            this.pricetxt.Size = new System.Drawing.Size(236, 26);
             this.pricetxt.TabIndex = 5;
             // 
             // nametxt
             // 
             this.nametxt.Location = new System.Drawing.Point(72, 13);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(358, 30);
+            this.nametxt.Size = new System.Drawing.Size(358, 26);
             this.nametxt.TabIndex = 2;
             // 
             // label4
@@ -436,7 +440,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(17, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 25);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Вартість покупки";
             // 
@@ -493,14 +497,15 @@
             this.tabPage3.Controls.Add(this.backbtn2);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1134, 598);
+            this.tabPage3.Size = new System.Drawing.Size(1134, 603);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Найкращi менеджери";
             // 
             // backbtn2
             // 
+            this.backbtn2.BackColor = System.Drawing.Color.Transparent;
             this.backbtn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backbtn2.BackgroundImage")));
             this.backbtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backbtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -512,17 +517,18 @@
             this.backbtn2.TabIndex = 4;
             this.backbtn2.Text = "Назад";
             this.backbtn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.backbtn2.UseVisualStyleBackColor = true;
+            this.backbtn2.UseVisualStyleBackColor = false;
             this.backbtn2.Click += new System.EventHandler(this.backbtn2_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(30, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(467, 36);
+            this.label6.Size = new System.Drawing.Size(367, 30);
             this.label6.TabIndex = 1;
             this.label6.Text = "Найрезультативніші менеджери\r\n";
             // 
@@ -543,16 +549,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(527, 72);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 36);
+            this.label9.Size = new System.Drawing.Size(180, 30);
             this.label9.TabIndex = 2;
             this.label9.Text = "Сума продажів";
             // 
             // uptop5btn
             // 
+            this.uptop5btn.BackColor = System.Drawing.Color.Transparent;
             this.uptop5btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uptop5btn.ForeColor = System.Drawing.SystemColors.Control;
             this.uptop5btn.Location = new System.Drawing.Point(838, 354);
@@ -560,7 +568,7 @@
             this.uptop5btn.Size = new System.Drawing.Size(210, 45);
             this.uptop5btn.TabIndex = 2;
             this.uptop5btn.Text = "Оновити";
-            this.uptop5btn.UseVisualStyleBackColor = true;
+            this.uptop5btn.UseVisualStyleBackColor = false;
             this.uptop5btn.Click += new System.EventHandler(this.uptop5btn_Click);
             // 
             // pg3
@@ -576,16 +584,16 @@
             // 
             this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 25;
+            this.listBox3.ItemHeight = 20;
             this.listBox3.Location = new System.Drawing.Point(14, 72);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(507, 254);
+            this.listBox3.Size = new System.Drawing.Size(507, 244);
             this.listBox3.TabIndex = 0;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(135)))), ((int)(((byte)(190)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
