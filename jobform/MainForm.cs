@@ -213,6 +213,7 @@ namespace jobform
             };
             pg2.SelectedObject = sale;
         }
+        private List<ManagerSales> topManagers;
 
         private void uptop5btn_Click(object sender, EventArgs e)
         {
@@ -243,7 +244,6 @@ namespace jobform
                 listBox3.Items.Add(manager.ManagerName);
             }
         }
-        private List<ManagerSales> topManagers;
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox3.SelectedIndex >= 0 && listBox3.SelectedIndex < topManagers.Count)
