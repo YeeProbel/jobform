@@ -30,18 +30,38 @@ namespace jobform
             list[index1] = list[index2];
             list[index2] = temp;
         }
-        private void BubbleSort(List<ManagerSales> list)
+        private void QuickSort(List<ManagerSales> list, int low, int high)
         {
-            for (int i = 0; i < list.Count - 1; i++)
+            if (low < high)
             {
-                for (int j = 0; j < list.Count - i - 1; j++)
+                int pi = Partition(list, low, high);
+
+                QuickSort(list, low, pi - 1);
+                QuickSort(list, pi + 1, high);
+            }
+        }
+
+        private int Partition(List<ManagerSales> list, int low, int high)
+        {
+            double pivot = list[high].TotalSales;
+            int i = low - 1;
+
+            for (int j = low; j < high; j++)
+            {
+                if (list[j].TotalSales > pivot)
                 {
-                    if (list[j].TotalSales < list[j + 1].TotalSales)
-                    {
-                        Swap(list, j, j + 1);
-                    }
+                    i++;
+                    Swap(list, i, j);
                 }
             }
+
+            Swap(list, i + 1, high);
+            return i + 1;
+        }
+
+        private void QuickSortWrapper(List<ManagerSales> list)
+        {
+            QuickSort(list, 0, list.Count - 1);
         }
 
         private void addbtn_Click(object sender, EventArgs e)
@@ -235,7 +255,7 @@ namespace jobform
                     }
                 }
             }
-            BubbleSort(managerSalesList);
+            QuickSortWrapper(managerSalesList);
             topManagers = managerSalesList.Take(5).ToList();
 
             listBox3.Items.Clear();
